@@ -28,7 +28,7 @@ public class ArraysUnionTask {
         //Сложность добавления в список O(1), доступа к карте - ~O(1).
         //Итоговая слонжность O(l)
         for (int i = 0; i < array2.length; i++) {
-            if (map.containsKey(array2[i])) {
+            if (map.containsKey(array2[i]) && map.get(array2[i]) > 0) {
                 list.add(array2[i]);
                 map.put(array2[i], map.get(array2[i]) - 1);
             }
